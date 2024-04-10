@@ -18,6 +18,10 @@ clean:
 test:
 	make -C test all
 
+run:
+	./test/test_standalone
+	perfetto/tools/open_trace_in_ui example.pftrace
+
 trace:
 	# pkill traced
 	# pkill traced_probes

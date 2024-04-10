@@ -18,7 +18,7 @@ void foo(){
 }
 
 int main(){
-	perfetto_c_init();
+	perfetto_c_init(PERFETTO_C_SYSTEAM_BACKEND);
 	for(int i = 0 ; i < 10 ; i++){
 		perfetto_c_event_instant("main");
 		perfetto_c_event_counter("iteration", i);
